@@ -34,6 +34,7 @@ ExternalProject_Add(   rdkafka
                        make -C src librdkafka.a -j4
     INSTALL_COMMAND    echo "Install only librdkafka.a" &&
                        make -C src install
+    BUILD_BYPRODUCTS   ${CMAKE_BINARY_DIR}/lib/librdkafka.a
 )
 
 # Target 'rdkafka::rdkafka' to define: lib-location, include-dir and dependencies
